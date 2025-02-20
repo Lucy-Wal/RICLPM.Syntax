@@ -1,6 +1,6 @@
 # RICLPM.Syntax
 
-This R package writes lavaan syntax for Random Intercept Cross Lag Panel Modelling, in line with Mulder & Hamaker ([2021](https://doi.org/10.1080/10705511.2020.1784738)). 
+This R package creates lavaan syntax for Random Intercept Cross Lag Panel Modelling, in line with Mulder & Hamaker ([2021](https://doi.org/10.1080/10705511.2020.1784738)). 
 
 ## How To Install
 
