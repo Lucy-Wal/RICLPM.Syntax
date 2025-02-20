@@ -7,7 +7,7 @@
 #resid = boolean - set to T if wish to include residual error terms
 
 #' @export
-latent_riclpm <- function(v, items, time, constraint, resid){
+latent_riclpm <- function(v, items, time, constraint = F, resid = F){
   
   alphabet <- paste0(letters)  
   start <- 1
