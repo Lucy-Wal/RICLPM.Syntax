@@ -3,17 +3,29 @@
 \name{riclpm}
 \alias{riclpm}
 \title{Function to generate syntax for RICLPM
-Inputs:
-v = name want to give each variable. E.g., c("Var1","Var2", "Var3")
-items = item range for each variable. E.g., c(3, 4, 6)
-time = numeric number of time waves E.g., 4}
-\usage{
-riclpm(v, time, constraint)
-}
-\description{
-Function to generate syntax for RICLPM
-Inputs:
+Needed User Inputs:
 v = name want to give each variable. E.g., c("Var1","Var2", "Var3")
 items = item range for each variable. E.g., c(3, 4, 6)
 time = numeric number of time waves E.g., 4
+Additional Options (default = F)
+constraint - set to T if wish to add constraints to cross-lagged effects and residual variances and covariances
+z1_o - set to T if wish to add a time-invariant predictor z1 of the observed variables
+z1_RI - set to T if wish to add a time-invariant predictor z1 of the Random Intercepts
+z2_RI - set to T if wish to set random intercepts predicting a time-invariant outcome z2
+z2_w - set to T if wish to set within components predicting a time-invariant outcome z2}
+\usage{
+riclpm(v, time, constraint = F, z1_o = F, z1_RI = F, z2_RI = F, z2_w = F)
+}
+\description{
+Function to generate syntax for RICLPM
+Needed User Inputs:
+v = name want to give each variable. E.g., c("Var1","Var2", "Var3")
+items = item range for each variable. E.g., c(3, 4, 6)
+time = numeric number of time waves E.g., 4
+Additional Options (default = F)
+constraint - set to T if wish to add constraints to cross-lagged effects and residual variances and covariances
+z1_o - set to T if wish to add a time-invariant predictor z1 of the observed variables
+z1_RI - set to T if wish to add a time-invariant predictor z1 of the Random Intercepts
+z2_RI - set to T if wish to set random intercepts predicting a time-invariant outcome z2
+z2_w - set to T if wish to set within components predicting a time-invariant outcome z2
 }
