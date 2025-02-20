@@ -21,60 +21,58 @@ model <- lavaan(syntax, data, missing = 'ML')
 cat(syntax)
 ```
 
-```r
- ##Random Intercepts## 
- 
- RI_X =~  1*T1_X +  1*T2_X +  1*T3_X +  1*T4_X 
- RI_Y =~  1*T1_Y +  1*T2_Y +  1*T3_Y +  1*T4_Y 
- 
- ##Residuals## 
- wx1 ~~ wx1 
- wx2 ~~ wx2 
- wx3 ~~ wx3 
- wx4 ~~ wx4 
- 
- wy1 ~~ wy1 
- wy2 ~~ wy2 
- wy3 ~~ wy3 
- wy4 ~~ wy4 
- 
- 
- ##Within Person Variables## 
- 
- wx1 =~ 1*T1_X 
- wx2 =~ 1*T2_X 
- wx3 =~ 1*T3_X 
- wx4 =~ 1*T4_X 
- 
- wy1 =~ 1*T1_Y 
- wy2 =~ 1*T2_Y 
- wy3 =~ 1*T3_Y 
- wy4 =~ 1*T4_Y 
- 
- ##Cross Lag Regressions## 
- 
- wx2 ~ wx1 + wy1 
- wx3 ~ wx2 + wy2 
- wx4 ~ wx3 + wy3 
- 
- wy2 ~ wx1 + wy1 
- wy3 ~ wx2 + wy2 
- wy4 ~ wx3 + wy3 
- 
- ##Residual Covariances in Same Wave## 
- 
- wx1 ~~ wy1 
- wx2 ~~ wy2 
- wx3 ~~ wy3 
- wx4 ~~ wy4 
- 
- ##Variances and Covariances of Random Intercepts## 
- 
- RI_X ~~ RI_X 
- RI_Y ~~ RI_Y 
- 
- RI_X ~~ RI_Y
-```
+> ##Random Intercepts##   
+>  
+> RI_X =~  1\*T1_X +  1\*T2_X +  1\*T3_X +  1\*T4_X   
+> RI_Y =~  1\*T1_Y +  1\*T2_Y +  1\*T3_Y +  1\*T4_Y   
+>  
+> ##Residuals##   
+> wx1 ~~ wx1   
+> wx2 ~~ wx2   
+> wx3 ~~ wx3   
+> wx4 ~~ wx4   
+>   
+> wy1 ~~ wy1   
+> wy2 ~~ wy2   
+> wy3 ~~ wy3   
+> wy4 ~~ wy4   
+>   
+>   
+> ##Within Person Variables##   
+>   
+> wx1 =~ 1\*T1_X   
+> wx2 =~ 1\*T2_X   
+> wx3 =~ 1\*T3_X   
+> wx4 =~ 1\*T4_X   
+>    
+> wy1 =~ 1\*T1_Y   
+> wy2 =~ 1\*T2_Y   
+> wy3 =~ 1\*T3_Y   
+> wy4 =~ 1\*T4_Y   
+> 
+> ##Cross Lag Regressions## 
+>   
+> wx2 ~ wx1 + wy1   
+> wx3 ~ wx2 + wy2   
+> wx4 ~ wx3 + wy3   
+>   
+> wy2 ~ wx1 + wy1     
+> wy3 ~ wx2 + wy2     
+> wy4 ~ wx3 + wy3   
+>   
+> ##Residual Covariances in Same Wave##   
+>   
+> wx1 ~~ wy1   
+> wx2 ~~ wy2   
+> wx3 ~~ wy3     
+> wx4 ~~ wy4   
+>   
+> ##Variances and Covariances of Random Intercepts##   
+>   
+> RI_X ~~ RI_X   
+> RI_Y ~~ RI_Y   
+>   
+> RI_X ~~ RI_Y  
 
 
 ### Latent Variables
