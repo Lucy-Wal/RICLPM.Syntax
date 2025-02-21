@@ -75,8 +75,8 @@ cat(syntax)
 > RI_X ~~ RI_Y  
 
 
-### Latent Variables
-`latent_riclpm()` can be used to generate syntax for latent factors in the same manner. This function requires an additional *items* input, corresponding to the number of items in each variable.
+### Multiple Indicators
+`multi_riclpm()` and `latent_riclpm()` can be used to generate syntax for multiple indicators and latent factors in the same manner. These functions require an additional *items* input, corresponding to the number of items in each variable.
 Additional constraints and error terms can be included. 
 
 ```r
