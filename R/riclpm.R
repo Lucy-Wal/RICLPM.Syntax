@@ -1,7 +1,6 @@
 #' Function to generate syntax for RICLPM
 #'Needed User Inputs:
 #'v = name want to give each variable. E.g., c("Var1","Var2", "Var3")
-#'items = item range for each variable. E.g., c(3, 4, 6)
 #'time = numeric number of time waves E.g., 4
 #'Additional Options (default = F)
 #'constraint - set to T if wish to add constraints to cross-lagged effects and residual variances and covariances
