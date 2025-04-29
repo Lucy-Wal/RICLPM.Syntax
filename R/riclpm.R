@@ -116,8 +116,8 @@ riclpm <- function(v, time, constraint = F, z1_o = F, z1_RI = F, z2_RI = F, z2_w
     cfa <- c(cfa, "##Constrain Grand Means Over Time##")
     cfa <- c(cfa, "\n")
     for(var in 1:length(v)){
-      line <- capture.output(cat(paste0(v[var], "_", 1:(time - 1), " + ")))
-      line <- capture.output(cat(paste0(line, v[var], "_", time, " ~ m", v[var], "*1")))
+      line <- capture.output(cat(paste0("T", 1:(time - 1), "_", v[var],  " + ")))
+      line <- capture.output(cat(paste0(line, "T", time, "_", v[var], " ~ m", v[var], "*1")))
       cfa <- c(cfa, "\n", line)}}
 
   if(z1_o | z2_RI | z2_w == T){
